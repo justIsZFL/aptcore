@@ -1,0 +1,14 @@
+apply plugin : 'java-library'
+
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.justIsZFL'
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.github.justIsZFL:aptlib:0.1'
+}
